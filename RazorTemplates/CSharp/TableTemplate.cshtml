@@ -1,0 +1,32 @@
+﻿@using dotnetmysql.Extensions
+@using dotnetmysql.Data
+@model ContextBuild
+@{
+    var project = Model.Project;
+    var columns = Model.Columns;
+    var maps = Model.DbTypes;
+}
+/*
+Create By @project.Author
+Date @DateTime.Now.ToString("yyyy-MM-dd HH:mm")
+Code Generate By dotnetmysql:@SystemExtensions.GetVersion()
+
+Source Server Type    : SqlServer
+Source Host           :@project.DbHost
+Source Schema         :@project.DbName
+
+Server Type           : MySQL
+File Encoding         : 65001
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+-- ----------------------------
+-- Table structure for @Model.TableName
+-- ----------------------------
+DROP TABLE IF EXISTS `@Model.TableName`;
+CREATE TABLE `@Model.TableName`  (
+@columns.ConvertColumn(maps)@columns.ConvertPrimaryKey()
+) @columns.ConvertTableEnd()
+
+SET FOREIGN_KEY_CHECKS = 1;
