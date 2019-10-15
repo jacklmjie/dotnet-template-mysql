@@ -1,5 +1,5 @@
 # tools-dotnetmysql
-## NET Core Global Tools
+## NET Core Global Tools和Razor模板生成文件
 sql server的表和存储过程转mysql
 (1).安装tool dotnet tool install -g <工具ID>
    dotnet tool install -g dotnetmysql --add-source ./
@@ -12,4 +12,5 @@ sql server的表和存储过程转mysql
 
 (5).使用
 dotnetmysql table D:\appsettings.json
+
 dotnetmysql proc D:\appsettings.json 未完成
