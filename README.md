@@ -1,4 +1,5 @@
 # tools-dotnetmysql
+## NET Core Global Tools
 sql server的表和存储过程转mysql
 (1).安装tool dotnet tool install -g <工具ID>
    dotnet tool install -g dotnetmysql --add-source ./
