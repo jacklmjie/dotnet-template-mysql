@@ -1,5 +1,6 @@
 # tools-dotnetmysql
 ## NET Core Global Tools和Razor模板生成文件
+### [基于SmartCode代码生成器的思路](https://github.com/dotnetcore/SmartCode)
 (1).安装tool dotnet tool install -g <工具ID>
    dotnet tool install -g dotnetmysql --add-source ./
 
